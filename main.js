@@ -100,6 +100,10 @@ Unicorn.prototype.update = function () {
 }
 
 Unicorn.prototype.draw = function (ctx) {
+	ctx.font = "25px Arial";
+	ctx.strokeStyle = "white";
+	ctx.strokeText("Press space to walk in other direction", 45, 40); 
+
     if (this.backwards) {
         this.backAnimation.drawFrame(this.game.clockTick, ctx, this.x, this.y);
 		this.speed = -150;
